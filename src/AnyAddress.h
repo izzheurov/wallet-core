@@ -162,6 +162,11 @@ class AnyAddress {
             return {addr.bytes.begin() + 1, addr.bytes.end()};
         }
 
+        case TWCoinTypeWestend: {
+            auto addr = Polkadot::Address(string);
+            return {addr.bytes.begin() + 1, addr.bytes.end()};
+        }
+
         case TWCoinTypeCardano: {
             auto addr = Cardano::AddressV3(string);
             return addr.data();

@@ -53,6 +53,8 @@ static Data getCallIndex(TWSS58AddressType network, const std::string& key) {
     switch (network) {
     case TWSS58AddressTypePolkadot:
         return polkadotCallIndices[key];
+    case TWSS58AddressTypeWestend:
+        return polkadotCallIndices[key];
     case TWSS58AddressTypeKusama:
         return kusamaCallIndices[key];
     }
@@ -60,6 +62,7 @@ static Data getCallIndex(TWSS58AddressType network, const std::string& key) {
 
 bool Extrinsic::encodeRawAccount(TWSS58AddressType network, uint32_t specVersion) {
     if ((network == TWSS58AddressTypePolkadot && specVersion >= multiAddrSpecVersion) ||
+        (network == TWSS58AddressTypeWestend && specVersion >= multiAddrSpecVersion) ||
         (network == TWSS58AddressTypeKusama && specVersion >= multiAddrSpecVersionKsm)) {
             return false;
         }

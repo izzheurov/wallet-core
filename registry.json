@@ -793,6 +793,28 @@
     }
   },
   {
+    "id": "westend",
+    "name": "Westend",
+    "coinId": 654,
+    "symbol": "WND",
+    "decimals": 10,
+    "blockchain": "Polkadot",
+    "derivationPath": "m/44'/654'/0'/0'/0'",
+    "curve": "ed25519",
+    "publicKeyType": "ed25519",
+    "explorer": {
+      "url": "https://westend.subscan.io",
+      "txPath": "/extrinsic/",
+      "accountPath": "/account/"
+    },
+    "info": {
+      "url": "https://polkadot.network/",
+      "source": "https://github.com/paritytech/polkadot",
+      "rpc": "wss://westend-rpc.polkadot.io",
+      "documentation": "https://polkadot.js.org/api/substrate/rpc.html"
+    }
+  },
+  {
     "id": "near",
     "name": "NEAR",
     "coinId": 397,
